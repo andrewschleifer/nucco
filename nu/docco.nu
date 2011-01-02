@@ -4,7 +4,7 @@
 ; If you've seen them, you know what it does.
 ;
 ; To use Nucco, you'll need Nu installed, as well as [NuMarkdown][];
-; Download the Nucco source and run `nuke install`, then you can use
+; Download the [Nucco source][nucco] and run `nuke install`, then you can use
 ; `/usr/local/bin/nucco`, or `(load "Nucco:docco")` if you want to do it
 ; yourself.
 ;
@@ -13,6 +13,7 @@
 ; [pycco]: http://fitzgen.github.com/pycco/
 ; [Nu]: http://programming.nu/
 ; [NuMarkdown]: https://github.com/timburks/numarkdown
+; [nucco]: https://github.com/andrewschleifer/nucco
 
 ; _TODO:_
 ;

@@ -1,0 +1,17 @@
+#!/usr/bin/env nush
+#
+# @file nucco
+
+(load "Nu:cocoa")
+(load "Nu:doc")
+(load "Nucco:docco")
+
+(function make-docco (file)
+    (set content (NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:"nil"))
+    (set content (docco (file lastPathComponent) content))
+    (content writeToFile:("./doc/" stringByAppendingString:((file lastPathComponent) stringByAppendingPathExtension:"html"))))
+
+(set files (rest (rest (((NSProcessInfo processInfo) arguments) list))))
+(if files
+    ((NSFileManager defaultManager) createDirectoryAtPath:"./doc/" withIntermediateDirectories:NO attributes:nil error:nil))
+(map make-docco files)
